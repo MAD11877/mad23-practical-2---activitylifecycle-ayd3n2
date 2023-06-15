@@ -20,16 +20,11 @@ public class MainActivity extends AppCompatActivity {
         else{
             btn.setText("UNFOLLOW");
         }
-    }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Button btn = (Button) findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener(){
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(person.getFollowed() == false){
+                if (person.getFollowed() == false) {
                     btn.setText("FOLLOW");
                     person.setFollowed(true);
                 } else if (person.getFollowed() == true) {
